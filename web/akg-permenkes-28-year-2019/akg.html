@@ -1,0 +1,2901 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AKG 2019 — Angka Kecukupan Gizi · Permenkes No. 28</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Jost:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <style>
+    /* ══════════════════════════════════════════
+   THEME VARIABLES
+══════════════════════════════════════════ */
+
+    [data-theme="light"] {
+      --bg: #fefcf7;
+      --bg-alt: #f8f4ec;
+      --bg-card: #ffffff;
+      --bg-sidebar: #faf7f1;
+      --border: rgba(60, 45, 20, 0.10);
+      --border-strong: rgba(60, 45, 20, 0.20);
+      --text: #1c160c;
+      --text-2: #5c4f38;
+      --text-3: #9c8c72;
+      --accent: #2e6b3e;
+      /* forest green — nutrition/health */
+      --accent-2: #5a9e6a;
+      --accent-warm: #c4863a;
+      /* warm amber */
+      --accent-red: #9e3232;
+      --tag-bg: rgba(46, 107, 62, 0.08);
+      --tag-text: #2e6b3e;
+      --header-bg: rgba(254, 252, 247, 0.93);
+      --shadow: 0 2px 24px rgba(30, 20, 5, 0.07);
+      --shadow-lg: 0 8px 48px rgba(30, 20, 5, 0.10);
+      --nav-active-bg: rgba(46, 107, 62, 0.07);
+      --nav-active-border: #2e6b3e;
+      --scrollbar: #d4c8b0;
+      --noise: 0.018;
+      --hero-line: #2e6b3e;
+      --ornament: rgba(196, 134, 58, 0.35);
+      --table-head: #f4f0e6;
+      --chip-bg: #f0ece2;
+      --progress-bar: linear-gradient(90deg, #2e6b3e, #5a9e6a);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0e100d;
+      --bg-alt: #131510;
+      --bg-card: #161912;
+      --bg-sidebar: #0c0f0a;
+      --border: rgba(160, 200, 120, 0.10);
+      --border-strong: rgba(160, 200, 120, 0.22);
+      --text: #e8eddf;
+      --text-2: #9aac88;
+      --text-3: #5a6650;
+      --accent: #72c484;
+      --accent-2: #4e9960;
+      --accent-warm: #d4975a;
+      --accent-red: #d46060;
+      --tag-bg: rgba(114, 196, 132, 0.12);
+      --tag-text: #72c484;
+      --header-bg: rgba(14, 16, 13, 0.93);
+      --shadow: 0 2px 24px rgba(0, 0, 0, 0.3);
+      --shadow-lg: 0 8px 48px rgba(0, 0, 0, 0.4);
+      --nav-active-bg: rgba(114, 196, 132, 0.08);
+      --nav-active-border: #72c484;
+      --scrollbar: #2a3020;
+      --noise: 0.02;
+      --hero-line: #72c484;
+      --ornament: rgba(212, 151, 90, 0.25);
+      --table-head: #1a1e14;
+      --chip-bg: #1a1e14;
+      --progress-bar: linear-gradient(90deg, #72c484, #4e9960);
+    }
+
+    /* ══════════════════════════════════════════
+   RESET & BASE
+══════════════════════════════════════════ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar) transparent;
+    }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: background 0.45s ease, color 0.45s ease;
+      overflow-x: hidden;
+      line-height: 1.72;
+    }
+
+    /* Paper texture overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: var(--noise);
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--scrollbar);
+      border-radius: 2px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ══════════════════════════════════════════
+   READING PROGRESS
+══════════════════════════════════════════ */
+    #readingProgress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--progress-bar);
+      transform-origin: left;
+      transform: scaleX(0);
+      z-index: 10000;
+      transition: transform 0.08s linear;
+    }
+
+    /* ══════════════════════════════════════════
+   HEADER
+══════════════════════════════════════════ */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--header-bg);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.45s ease, border-color 0.45s ease;
+    }
+
+    .header-wrap {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 36px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .site-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .brand-emblem {
+      width: 42px;
+      height: 42px;
+      border: 1.5px solid var(--accent);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--accent);
+      position: relative;
+      flex-shrink: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .brand-emblem::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid var(--ornament);
+      border-radius: 50%;
+    }
+
+    .brand-emblem:hover {
+      transform: rotate(12deg);
+    }
+
+    .brand-info {}
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: var(--text);
+      line-height: 1.2;
+      transition: color 0.45s ease;
+    }
+
+    .brand-sub {
+      font-size: 10.5px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      display: block;
+      transition: color 0.45s ease;
+    }
+
+    .header-center {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hc-pill {
+      background: var(--chip-bg);
+      border: 1px solid var(--border);
+      color: var(--text-3);
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .hc-pill.green {
+      background: var(--tag-bg);
+      border-color: rgba(46, 107, 62, 0.2);
+      color: var(--tag-text);
+    }
+
+    [data-theme="dark"] .hc-pill.green {
+      border-color: rgba(114, 196, 132, 0.2);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-toggle {
+      background: none;
+      border: 1.5px solid var(--border-strong);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      color: var(--text-2);
+      transition: all 0.35s cubic-bezier(.34, 1.56, .64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: scale(1.1) rotate(8deg);
+    }
+
+    .ti {
+      position: absolute;
+      transition: all 0.38s cubic-bezier(.34, 1.56, .64, 1);
+    }
+
+    [data-theme="light"] .ti-moon {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    [data-theme="light"] .ti-sun {
+      opacity: 0;
+      transform: translateY(18px) scale(0.5);
+    }
+
+    [data-theme="dark"] .ti-moon {
+      opacity: 0;
+      transform: translateY(-18px) scale(0.5);
+    }
+
+    [data-theme="dark"] .ti-sun {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .btn-menu {
+      display: none;
+      background: none;
+      border: 1.5px solid var(--border-strong);
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--text-2);
+      transition: all 0.3s ease;
+    }
+
+    .btn-menu:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ══════════════════════════════════════════
+   PAGE LAYOUT
+══════════════════════════════════════════ */
+    .page-layout {
+      display: flex;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding-top: 68px;
+      min-height: 100vh;
+    }
+
+    /* ══════════════════════════════════════════
+   SIDEBAR
+══════════════════════════════════════════ */
+    .sidebar {
+      width: 290px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 68px;
+      height: calc(100vh - 68px);
+      overflow-y: auto;
+      background: var(--bg-sidebar);
+      border-right: 1px solid var(--border);
+      transition: background 0.45s ease, transform 0.38s cubic-bezier(.4, 0, .2, 1), border-color 0.45s ease;
+      scrollbar-width: thin;
+      scrollbar-color: var(--scrollbar) transparent;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sb-top {
+      padding: 28px 24px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .sb-label {
+      font-size: 9.5px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .sb-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.35;
+      transition: color 0.45s ease;
+    }
+
+    .sb-nav {
+      padding: 12px 0;
+      flex: 1;
+    }
+
+    .sb-group {
+      margin-bottom: 4px;
+    }
+
+    .sb-group-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      padding: 10px 22px 4px;
+    }
+
+    .sb-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 22px;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-2);
+      border-left: 2px solid transparent;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.25s, border-color 0.25s, background 0.25s;
+      overflow: hidden;
+    }
+
+    .sb-link .sb-link-bg {
+      position: absolute;
+      inset: 0;
+      background: var(--nav-active-bg);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    .sb-link:hover .sb-link-bg,
+    .sb-link.active .sb-link-bg {
+      transform: scaleX(1);
+    }
+
+    .sb-link:hover {
+      color: var(--text);
+      border-left-color: rgba(46, 107, 62, 0.3);
+    }
+
+    .sb-link.active {
+      color: var(--accent);
+      border-left-color: var(--nav-active-border);
+      font-weight: 500;
+    }
+
+    .sb-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--text-3);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+      transition: background 0.25s, transform 0.25s;
+    }
+
+    .sb-link:hover .sb-dot,
+    .sb-link.active .sb-dot {
+      background: var(--accent);
+      transform: scale(1.5);
+    }
+
+    .sb-link-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .sb-link-num {
+      margin-left: auto;
+      font-size: 9.5px;
+      color: var(--text-3);
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+      transition: color 0.25s;
+    }
+
+    .sb-link.active .sb-link-num,
+    .sb-link:hover .sb-link-num {
+      color: var(--accent);
+    }
+
+    .sb-bottom {
+      padding: 18px 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .sb-stamp {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sb-stamp-box {
+      width: 36px;
+      height: 36px;
+      border: 1.5px solid var(--ornament);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+      color: var(--accent-warm);
+    }
+
+    .sb-stamp-text {
+      font-size: 11px;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+
+    .sb-stamp-text strong {
+      color: var(--text-2);
+      font-weight: 500;
+      display: block;
+    }
+
+    /* ══════════════════════════════════════════
+   MAIN CONTENT
+══════════════════════════════════════════ */
+    .main-content {
+      flex: 1;
+      min-width: 0;
+      padding: 56px 64px;
+      background: var(--bg);
+      transition: background 0.45s ease;
+    }
+
+    /* ══════════════════════════════════════════
+   HERO
+══════════════════════════════════════════ */
+    .hero {
+      margin-bottom: 80px;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: slideDown 0.7s 0.1s ease forwards;
+    }
+
+    .hero-kicker-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: slideDown 0.7s 0.2s ease forwards;
+      transition: color 0.45s ease;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--text-3);
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: slideDown 0.7s 0.3s ease forwards;
+    }
+
+    .hero-rule {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      opacity: 0;
+      animation: slideDown 0.7s 0.35s ease forwards;
+    }
+
+    .hero-rule-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--hero-line), transparent);
+      opacity: 0.35;
+      max-width: 80px;
+    }
+
+    .hero-rule-glyph {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 16px;
+      color: var(--accent-warm);
+      opacity: 0.6;
+      letter-spacing: 8px;
+    }
+
+    .hero-desc {
+      font-size: 15.5px;
+      color: var(--text-2);
+      max-width: 660px;
+      line-height: 1.85;
+      margin-bottom: 36px;
+      font-weight: 300;
+      opacity: 0;
+      animation: slideDown 0.7s 0.4s ease forwards;
+      transition: color 0.45s ease;
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      opacity: 0;
+      animation: slideDown 0.7s 0.5s ease forwards;
+    }
+
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: var(--chip-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: 12.5px;
+      font-weight: 400;
+      color: var(--text-2);
+      transition: all 0.3s ease;
+    }
+
+    .chip:hover {
+      border-color: var(--border-strong);
+      color: var(--text);
+      transform: translateY(-1px);
+    }
+
+    .chip-i {
+      color: var(--accent);
+      font-size: 15px;
+    }
+
+    /* ══════════════════════════════════════════
+   SECTION WRAPPERS
+══════════════════════════════════════════ */
+    .section {
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+
+    .section.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sec-hd {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+
+    .sec-num {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--tag-bg);
+      border: 1px solid rgba(46, 107, 62, 0.18);
+      padding: 4px 11px;
+      border-radius: 20px;
+      white-space: nowrap;
+      margin-top: 4px;
+      flex-shrink: 0;
+      letter-spacing: 0.05em;
+      transition: all 0.45s ease;
+    }
+
+    [data-theme="dark"] .sec-num {
+      border-color: rgba(114, 196, 132, 0.18);
+    }
+
+    .sec-titles {}
+
+    .sec-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      margin-bottom: 4px;
+      transition: color 0.45s ease;
+    }
+
+    .sec-caption {
+      font-size: 12.5px;
+      color: var(--text-3);
+      letter-spacing: 0.06em;
+      font-style: italic;
+    }
+
+    /* ══════════════════════════════════════════
+   ORNAMENTAL DIVIDERS
+══════════════════════════════════════════ */
+    .ornament {
+      text-align: center;
+      margin: 64px 0;
+      color: var(--accent-warm);
+      opacity: 0.3;
+      font-size: 18px;
+      letter-spacing: 20px;
+      user-select: none;
+    }
+
+    /* ══════════════════════════════════════════
+   CARDS
+══════════════════════════════════════════ */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--progress-bar);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .card-icon {
+      font-size: 26px;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+      transition: color 0.45s ease;
+    }
+
+    .card-body {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.78;
+    }
+
+    /* ══════════════════════════════════════════
+   NUTRIENT INFO BOXES (big data)
+══════════════════════════════════════════ */
+    .nutrient-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      margin: 24px 0;
+    }
+
+    .nutrient-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 18px;
+      text-align: center;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nutrient-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--nb-color, var(--accent));
+    }
+
+    .nutrient-box:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+      border-color: var(--border-strong);
+    }
+
+    .nb-emoji {
+      font-size: 24px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .nb-name {
+      font-size: 11.5px;
+      color: var(--text-3);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      margin-bottom: 6px;
+    }
+
+    .nb-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1;
+      transition: color 0.45s ease;
+    }
+
+    .nb-unit {
+      font-size: 10.5px;
+      color: var(--text-3);
+      margin-top: 3px;
+    }
+
+    .nb-note {
+      font-size: 10px;
+      color: var(--text-3);
+      margin-top: 5px;
+      font-style: italic;
+    }
+
+    /* ══════════════════════════════════════════
+   TABLE
+══════════════════════════════════════════ */
+    .tbl-wrap {
+      overflow-x: auto;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+      margin: 24px 0;
+      box-shadow: var(--shadow);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+
+    thead {
+      background: var(--table-head);
+    }
+
+    th {
+      padding: 13px 16px;
+      text-align: left;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 16px;
+      color: var(--text-2);
+      border-bottom: 1px solid var(--border);
+      transition: background 0.2s;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background: var(--nav-active-bg);
+    }
+
+    td strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 12px;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .badge-green {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+    }
+
+    .badge-amber {
+      background: rgba(196, 134, 58, 0.12);
+      color: var(--accent-warm);
+    }
+
+    .badge-red {
+      background: rgba(158, 50, 50, 0.10);
+      color: var(--accent-red);
+    }
+
+    /* ══════════════════════════════════════════
+   PULL QUOTE
+══════════════════════════════════════════ */
+    .pq {
+      border-left: 3px solid var(--accent);
+      padding: 18px 26px;
+      background: var(--bg-alt);
+      border-radius: 0 12px 12px 0;
+      margin: 28px 0;
+      transition: background 0.45s ease;
+      position: relative;
+    }
+
+    .pq::before {
+      content: '❝';
+      position: absolute;
+      top: -4px;
+      left: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: var(--accent);
+      opacity: 0.25;
+      line-height: 1;
+    }
+
+    .pq-text {
+      font-family: 'Libre Baskerville', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 8px;
+      transition: color 0.45s ease;
+    }
+
+    .pq-src {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-3);
+    }
+
+    /* ══════════════════════════════════════════
+   HIGHLIGHT BOX
+══════════════════════════════════════════ */
+    .hl-box {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      margin: 20px 0;
+      transition: all 0.3s ease;
+    }
+
+    .hl-box:hover {
+      border-color: var(--border-strong);
+      box-shadow: var(--shadow);
+    }
+
+    .hl-icon {
+      font-size: 22px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .hl-title {
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 5px;
+      transition: color 0.45s ease;
+    }
+
+    .hl-text {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.72;
+    }
+
+    /* ══════════════════════════════════════════
+   PROSE
+══════════════════════════════════════════ */
+    .prose {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.88;
+      max-width: 760px;
+    }
+
+    .prose p {
+      margin-bottom: 18px;
+    }
+
+    .prose strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .prose h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 12px;
+      transition: color 0.45s ease;
+    }
+
+    /* ══════════════════════════════════════════
+   LIFE STAGE TABLE (AKG key feature)
+══════════════════════════════════════════ */
+    .ls-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 20px 0;
+    }
+
+    .ls-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: all 0.35s ease;
+    }
+
+    .ls-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--border-strong);
+    }
+
+    .ls-head {
+      padding: 16px 20px 12px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-alt);
+      transition: background 0.45s ease;
+    }
+
+    .ls-emoji {
+      font-size: 22px;
+    }
+
+    .ls-head-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.2;
+      transition: color 0.45s ease;
+    }
+
+    .ls-head-sub {
+      font-size: 11px;
+      color: var(--text-3);
+    }
+
+    .ls-body {
+      padding: 16px 20px;
+    }
+
+    .ls-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13px;
+    }
+
+    .ls-row:last-child {
+      border-bottom: none;
+    }
+
+    .ls-row-label {
+      color: var(--text-2);
+      font-weight: 400;
+    }
+
+    .ls-row-value {
+      color: var(--text);
+      font-weight: 600;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    /* ══════════════════════════════════════════
+   ACCORDION
+══════════════════════════════════════════ */
+    .accord {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      transition: border-color 0.3s;
+    }
+
+    .accord:hover {
+      border-color: var(--border-strong);
+    }
+
+    .accord-hd {
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      background: var(--bg-card);
+      user-select: none;
+      transition: background 0.2s;
+    }
+
+    .accord-hd:hover {
+      background: var(--nav-active-bg);
+    }
+
+    .accord-hd-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .accord-num {
+      font-family: 'Libre Baskerville', serif;
+      font-style: italic;
+      font-size: 12px;
+      color: var(--accent);
+      font-weight: 700;
+      min-width: 30px;
+    }
+
+    .accord-hd-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text);
+      transition: color 0.45s ease;
+    }
+
+    .accord-arrow {
+      color: var(--text-3);
+      font-size: 11px;
+      transition: transform 0.3s cubic-bezier(.4, 0, .2, 1);
+    }
+
+    .accord.open .accord-arrow {
+      transform: rotate(180deg);
+    }
+
+    .accord-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.42s cubic-bezier(.4, 0, .2, 1);
+      background: var(--bg-alt);
+      transition: max-height 0.42s ease, background 0.45s ease;
+    }
+
+    .accord.open .accord-body {
+      max-height: 800px;
+    }
+
+    .accord-content {
+      padding: 16px 20px;
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.78;
+      border-top: 1px solid var(--border);
+    }
+
+    .accord-content ul {
+      margin: 8px 0 8px 0;
+      list-style: none;
+    }
+
+    .accord-content ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 7px;
+    }
+
+    .accord-content ul li::before {
+      content: '◈';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 8px;
+      top: 5px;
+    }
+
+    /* ══════════════════════════════════════════
+   TIMELINE
+══════════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      bottom: 10px;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--accent), transparent);
+      opacity: 0.3;
+    }
+
+    .tl-item {
+      position: relative;
+      margin-bottom: 26px;
+    }
+
+    .tl-item::before {
+      content: '';
+      position: absolute;
+      left: -23px;
+      top: 6px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 2px solid var(--accent);
+      background: var(--bg);
+      transition: background 0.3s;
+    }
+
+    .tl-item:hover::before {
+      background: var(--accent);
+    }
+
+    .tl-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3px;
+    }
+
+    .tl-title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+      transition: color 0.45s ease;
+    }
+
+    .tl-desc {
+      font-size: 13.5px;
+      color: var(--text-2);
+      line-height: 1.68;
+    }
+
+    /* ══════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════ */
+    .site-footer {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      padding: 44px 64px;
+      transition: background 0.45s ease, border-color 0.45s ease;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+      transition: color 0.45s ease;
+    }
+
+    .footer-tagline {
+      font-size: 12px;
+      color: var(--text-3);
+      font-style: italic;
+    }
+
+    .footer-orn {
+      font-size: 20px;
+      color: var(--accent-warm);
+      opacity: 0.3;
+      letter-spacing: 10px;
+    }
+
+    .footer-info {
+      font-size: 12px;
+      color: var(--text-3);
+      text-align: right;
+      line-height: 1.6;
+    }
+
+    /* ══════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════ */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .rev {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .rev.vis {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .rev-d1 {
+      transition-delay: 0.1s;
+    }
+
+    .rev-d2 {
+      transition-delay: 0.2s;
+    }
+
+    .rev-d3 {
+      transition-delay: 0.3s;
+    }
+
+    .rev-d4 {
+      transition-delay: 0.4s;
+    }
+
+    /* ══════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .main-content {
+        padding: 48px 44px;
+      }
+
+      .sidebar {
+        width: 265px;
+      }
+
+      .header-center {
+        display: none;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .header-wrap {
+        padding: 0 20px;
+      }
+
+      .btn-menu {
+        display: flex;
+      }
+
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 68px;
+        bottom: 0;
+        z-index: 900;
+        transform: translateX(-100%);
+        box-shadow: 4px 0 32px rgba(0, 0, 0, 0.15);
+        width: 285px;
+      }
+
+      .sidebar.open {
+        transform: translateX(0);
+      }
+
+      .sb-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        top: 68px;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 899;
+        backdrop-filter: blur(3px);
+      }
+
+      .sb-overlay.open {
+        display: block;
+      }
+
+      .page-layout {
+        display: block;
+      }
+
+      .main-content {
+        padding: 32px 22px;
+      }
+
+      .site-footer {
+        padding: 36px 22px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-info {
+        text-align: center;
+      }
+
+      .footer-orn {
+        display: none;
+      }
+
+      .hero-headline {
+        font-size: 2rem;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nutrient-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .ls-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-content {
+        padding: 24px 16px;
+      }
+
+      .nutrient-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-chips {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .sec-hd {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .tbl-wrap {
+        border-radius: 10px;
+      }
+    }
+
+    /* Sidebar overlay mobile display fix */
+    @media (min-width: 821px) {
+      .sb-overlay {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div id="readingProgress"></div>
+
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header">
+    <div class="header-wrap">
+      <div class="site-brand">
+        <div class="brand-emblem">🌿</div>
+        <div class="brand-info">
+          <div class="brand-name">AKG 2019</div>
+          <span class="brand-sub">Angka Kecukupan Gizi · Permenkes 28</span>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <span class="hc-pill">Ministry of Health · Indonesia</span>
+        <span class="hc-pill green">Nutrition Policy</span>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn-toggle" id="themeBtn" aria-label="Toggle theme">
+          <span class="ti ti-moon">🌙</span>
+          <span class="ti ti-sun">☀️</span>
+        </button>
+        <button class="btn-menu" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile overlay -->
+  <div class="sb-overlay" id="sbOverlay"></div>
+
+  <!-- ═══ PAGE LAYOUT ═══ -->
+  <div class="page-layout">
+
+    <!-- ═══ SIDEBAR ═══ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sb-top">
+        <div class="sb-label">Contents</div>
+        <div class="sb-title">Nutritional Adequacy<br>Figures Guide</div>
+      </div>
+
+      <nav class="sb-nav" id="sbNav">
+
+        <div class="sb-group">
+          <div class="sb-group-label">Overview</div>
+          <a class="sb-link active" href="#intro" data-s="intro">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Introduction</span>
+            <span class="sb-link-num">I</span>
+          </a>
+          <a class="sb-link" href="#purpose" data-s="purpose">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Purpose & Background</span>
+            <span class="sb-link-num">II</span>
+          </a>
+        </div>
+
+        <div class="sb-group">
+          <div class="sb-group-label">Core Content</div>
+          <a class="sb-link" href="#whatakg" data-s="whatakg">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">What is AKG?</span>
+            <span class="sb-link-num">III</span>
+          </a>
+          <a class="sb-link" href="#nutrients" data-s="nutrients">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Key Nutrients</span>
+            <span class="sb-link-num">IV</span>
+          </a>
+          <a class="sb-link" href="#lifestages" data-s="lifestages">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Life Stage Groups</span>
+            <span class="sb-link-num">V</span>
+          </a>
+        </div>
+
+        <div class="sb-group">
+          <div class="sb-group-label">Reference Data</div>
+          <a class="sb-link" href="#values" data-s="values">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">AKG Reference Table</span>
+            <span class="sb-link-num">VI</span>
+          </a>
+          <a class="sb-link" href="#macros" data-s="macros">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Macronutrients</span>
+            <span class="sb-link-num">VII</span>
+          </a>
+          <a class="sb-link" href="#micros" data-s="micros">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Vitamins & Minerals</span>
+            <span class="sb-link-num">VIII</span>
+          </a>
+        </div>
+
+        <div class="sb-group">
+          <div class="sb-group-label">Application</div>
+          <a class="sb-link" href="#usage" data-s="usage">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">How to Use AKG</span>
+            <span class="sb-link-num">IX</span>
+          </a>
+          <a class="sb-link" href="#labelling" data-s="labelling">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">Food Labelling</span>
+            <span class="sb-link-num">X</span>
+          </a>
+          <a class="sb-link" href="#comparison" data-s="comparison">
+            <span class="sb-link-bg"></span>
+            <span class="sb-dot"></span>
+            <span class="sb-link-text">AKG 2013 vs 2019</span>
+            <span class="sb-link-num">XI</span>
+          </a>
+        </div>
+
+      </nav>
+
+      <div class="sb-bottom">
+        <div class="sb-stamp">
+          <div class="sb-stamp-box">📜</div>
+          <div class="sb-stamp-text">
+            <strong>Permenkes 28 · 2019</strong>
+            Republic of Indonesia
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main class="main-content" id="mainContent">
+
+      <!-- HERO -->
+      <section id="intro">
+        <div class="hero">
+          <div class="hero-kicker">
+            <span class="hero-kicker-dot"></span>
+            Indonesian Nutrition Policy · 2019
+          </div>
+          <h1 class="hero-headline">
+            <em>Angka Kecukupan</em><br>
+            Gizi
+          </h1>
+          <p class="hero-sub">Nutritional Adequacy Figures — A Complete Guide</p>
+          <div class="hero-rule">
+            <div class="hero-rule-line"></div>
+            <span class="hero-rule-glyph">✦ ❧ ✦</span>
+            <div class="hero-rule-line"
+              style="background:linear-gradient(90deg,transparent,var(--hero-line));opacity:0.35;"></div>
+          </div>
+          <p class="hero-desc">
+            <strong>Peraturan Menteri Kesehatan No. 28 Year 2019</strong> establishes Indonesia's updated Nutritional
+            Adequacy Figures (AKG) — the official dietary reference values defining the daily intake of energy,
+            macronutrients, vitamins, and minerals needed by healthy Indonesians across all life stages.
+          </p>
+          <div class="hero-chips">
+            <div class="chip"><span class="chip-i">📅</span> Enacted 2019</div>
+            <div class="chip"><span class="chip-i">🏛️</span> Ministry of Health, RI</div>
+            <div class="chip"><span class="chip-i">🥗</span> Nutrition Reference Values</div>
+            <div class="chip"><span class="chip-i">👨‍👩‍👧‍👦</span> All Life Stages</div>
+            <div class="chip"><span class="chip-i">🔄</span> Updates AKG 2013</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <!-- PURPOSE -->
+      <section class="section rev" id="purpose">
+        <div class="sec-hd">
+          <span class="sec-num">Art. I</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Purpose & Legal Background</h2>
+            <div class="sec-caption">Why Indonesia updated its nutritional reference standards</div>
+          </div>
+        </div>
+
+        <div class="pq rev rev-d1">
+          <p class="pq-text">
+            "Angka Kecukupan Gizi yang dianjurkan bagi Bangsa Indonesia harus disesuaikan dengan perkembangan ilmu
+            pengetahuan dan teknologi serta kondisi perubahan status gizi dan kesehatan masyarakat."
+          </p>
+          <div class="pq-src">— Permenkes No. 28 / 2019, Preamble</div>
+        </div>
+
+        <div class="prose rev rev-d2">
+          <p>
+            The Ministry of Health issued Permenkes No. 28 of 2019 to update Indonesia's national dietary reference
+            values, replacing the previous AKG established under <strong>Permenkes No. 75 of 2013</strong>. This update
+            was driven by advances in nutritional science, changes in the nutritional status of the Indonesian
+            population, and alignment with international dietary reference frameworks.
+          </p>
+          <p>
+            The AKG (Angka Kecukupan Gizi) — or Recommended Dietary Allowances — are used as the scientific foundation
+            for nutrition policies, health programmes, food product labelling (as % Daily Value / AKG), dietary
+            planning, and public nutrition education across Indonesia.
+          </p>
+        </div>
+
+        <div class="card-grid rev rev-d3">
+          <div class="card">
+            <span class="card-icon">🔬</span>
+            <div class="card-title">Science-Based Update</div>
+            <p class="card-body">Revised based on the latest nutritional science, updated population data, and new
+              global dietary reference value methodologies from WHO, FAO, and regional bodies.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📊</span>
+            <div class="card-title">Policy Foundation</div>
+            <p class="card-body">Provides the scientific basis for all national nutrition programmes, school feeding
+              policies, food fortification standards, and clinical dietary guidelines in Indonesia.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🏷️</span>
+            <div class="card-title">Food Label Reference</div>
+            <p class="card-body">All Indonesian food products must use AKG 2019 values as the basis for calculating
+              percentage Daily Value (%AKG) on nutrition information panels.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">❧ ❧ ❧</div>
+
+      <!-- WHAT IS AKG -->
+      <section class="section rev" id="whatakg">
+        <div class="sec-hd">
+          <span class="sec-num">Art. II</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">What is AKG?</h2>
+            <div class="sec-caption">Understanding the Nutritional Adequacy Figure framework</div>
+          </div>
+        </div>
+
+        <div class="hl-box rev rev-d1">
+          <span class="hl-icon">💡</span>
+          <div>
+            <div class="hl-title">Definition: Angka Kecukupan Gizi (AKG)</div>
+            <div class="hl-text">
+              AKG is the level of daily intake of essential nutrients considered sufficient to meet the nutritional
+              needs of <em>almost all healthy individuals</em> (97–98%) within a specific population group, classified
+              by age, sex, and physiological status (pregnancy/lactation).
+            </div>
+          </div>
+        </div>
+
+        <div class="prose rev rev-d2">
+          <p>
+            AKG values represent <strong>population-level recommendations</strong>, not individual prescriptions. They
+            are set at levels that meet the needs of the majority of healthy people — accounting for biological
+            variability between individuals. Someone consuming exactly the AKG level may or may not meet their personal
+            needs.
+          </p>
+          <p>
+            The AKG framework in Permenkes 28/2019 covers <strong>three categories of dietary reference values</strong>:
+            recommended intakes (AKG), adequate intakes (Asupan Adekuat), and upper tolerable intake levels (Batas Atas
+            Asupan). Together, these guide both prevention of deficiency and prevention of excessive intake.
+          </p>
+        </div>
+
+        <div class="timeline rev rev-d3">
+          <div class="tl-item">
+            <div class="tl-label">Component 1</div>
+            <div class="tl-title">Angka Kecukupan (AK) — Recommended Intake</div>
+            <div class="tl-desc">The average daily intake level sufficient to meet the nutrient requirements of nearly
+              all (97–98%) healthy individuals in a particular life stage and sex group. Used for dietary planning and
+              assessment at the population level.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-label">Component 2</div>
+            <div class="tl-title">Asupan Adekuat (AA) — Adequate Intake</div>
+            <div class="tl-desc">Used when evidence is insufficient to establish an AK. Based on observed mean intakes
+              of healthy populations. Indicates a level assumed to be nutritionally adequate.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-label">Component 3</div>
+            <div class="tl-title">Batas Atas Asupan (BA) — Tolerable Upper Intake</div>
+            <div class="tl-desc">The highest average daily nutrient intake level likely to pose no risk of adverse
+              health effects. Chronic intake above this level increases risk of toxicity or adverse effects.</div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-label">Component 4</div>
+            <div class="tl-title">Kebutuhan Rata-Rata (EAR) — Estimated Average Requirement</div>
+            <div class="tl-desc">The daily intake level estimated to meet the needs of exactly 50% of healthy
+              individuals in a life stage and sex group. Used primarily in research and population assessment.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <!-- KEY NUTRIENTS -->
+      <section class="section rev" id="nutrients">
+        <div class="sec-hd">
+          <span class="sec-num">Art. III</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Key Nutrients Covered</h2>
+            <div class="sec-caption">All nutritional components specified in AKG 2019</div>
+          </div>
+        </div>
+
+        <div class="prose rev rev-d1">
+          <p>AKG 2019 provides reference values for <strong>54 nutritional components</strong> — a significant expansion
+            from the previous 2013 version. These cover energy, macronutrients, vitamins, minerals, and other bioactive
+            compounds.</p>
+        </div>
+
+        <div class="nutrient-grid rev rev-d2">
+          <div class="nutrient-box" style="--nb-color:#2e6b3e;">
+            <span class="nb-emoji">⚡</span>
+            <div class="nb-name">Energy</div>
+            <div class="nb-value">2,150</div>
+            <div class="nb-unit">kcal/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#5a9e6a;">
+            <span class="nb-emoji">🥩</span>
+            <div class="nb-name">Protein</div>
+            <div class="nb-value">60</div>
+            <div class="nb-unit">g/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#c4863a;">
+            <span class="nb-emoji">🫒</span>
+            <div class="nb-name">Total Fat</div>
+            <div class="nb-value">65</div>
+            <div class="nb-unit">g/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#7a6ab0;">
+            <span class="nb-emoji">🍞</span>
+            <div class="nb-name">Carbohydrate</div>
+            <div class="nb-value">325</div>
+            <div class="nb-unit">g/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#3a8ab0;">
+            <span class="nb-emoji">💧</span>
+            <div class="nb-name">Water</div>
+            <div class="nb-value">2,500</div>
+            <div class="nb-unit">ml/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#b04a3a;">
+            <span class="nb-emoji">🌾</span>
+            <div class="nb-name">Dietary Fibre</div>
+            <div class="nb-value">34</div>
+            <div class="nb-unit">g/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#b09030;">
+            <span class="nb-emoji">☀️</span>
+            <div class="nb-name">Vitamin D</div>
+            <div class="nb-value">15</div>
+            <div class="nb-unit">mcg/day</div>
+            <div class="nb-note">New: added vs 2013</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#9e4a2e;">
+            <span class="nb-emoji">🩸</span>
+            <div class="nb-name">Iron (Fe)</div>
+            <div class="nb-value">9</div>
+            <div class="nb-unit">mg/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+          <div class="nutrient-box" style="--nb-color:#2e8a6e;">
+            <span class="nb-emoji">🦷</span>
+            <div class="nb-name">Calcium</div>
+            <div class="nb-value">1,000</div>
+            <div class="nb-unit">mg/day</div>
+            <div class="nb-note">Adult male 30–49 yr ref.</div>
+          </div>
+        </div>
+
+        <div class="hl-box rev rev-d3" style="margin-top:24px;">
+          <span class="hl-icon">📌</span>
+          <div>
+            <div class="hl-title">Note on Reference Values Above</div>
+            <div class="hl-text">Values shown are for <em>adult males aged 30–49 years</em> as a general reference. AKG
+              2019 provides distinct values for every life stage: infants, children, adolescents, adults, pregnant
+              women, and lactating women. Always refer to the full table for your specific group.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">❧ ❧ ❧</div>
+
+      <!-- LIFE STAGES -->
+      <section class="section rev" id="lifestages">
+        <div class="sec-hd">
+          <span class="sec-num">Art. IV</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Life Stage Groups</h2>
+            <div class="sec-caption">AKG is defined separately for every stage of human life</div>
+          </div>
+        </div>
+
+        <div class="prose rev rev-d1">
+          <p>AKG 2019 recognises that nutritional needs vary dramatically across different life stages. The regulation
+            categorises the population into <strong>12+ life stage groups</strong>, each with distinct energy and
+            nutrient requirements.</p>
+        </div>
+
+        <div class="ls-grid rev rev-d2">
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">👶</span>
+              <div>
+                <div class="ls-head-title">Infants</div>
+                <div class="ls-head-sub">0–11 months</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">550–725 kcal</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">9–15 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">200–270 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Vitamin D</span><span class="ls-row-value">10 mcg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">🧒</span>
+              <div>
+                <div class="ls-head-title">Children</div>
+                <div class="ls-head-sub">1–9 years</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">1,125–1,650
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">20–35 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">650–1,000
+                  mg</span></div>
+              <div class="ls-row"><span class="ls-row-label">Iron</span><span class="ls-row-value">7–10 mg</span></div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">🧑</span>
+              <div>
+                <div class="ls-head-title">Adolescents</div>
+                <div class="ls-head-sub">10–18 years</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">1,850–2,475
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">55–75 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">1,200 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Iron</span><span class="ls-row-value">8–26 mg</span></div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">👨</span>
+              <div>
+                <div class="ls-head-title">Adult Male</div>
+                <div class="ls-head-sub">19–64 years</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">2,100–2,650
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">60–65 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">1,000 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Iron</span><span class="ls-row-value">9–13 mg</span></div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">👩</span>
+              <div>
+                <div class="ls-head-title">Adult Female</div>
+                <div class="ls-head-sub">19–64 years</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">1,800–2,250
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">50–60 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">1,000 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Iron</span><span class="ls-row-value">18–26 mg</span></div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">🤰</span>
+              <div>
+                <div class="ls-head-title">Pregnant Women</div>
+                <div class="ls-head-sub">+Addition to baseline</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy +</span><span class="ls-row-value">+180–300
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein +</span><span class="ls-row-value">+1–30 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Folate +</span><span class="ls-row-value">+200 mcg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Iron +</span><span class="ls-row-value">+0 mg</span></div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">🤱</span>
+              <div>
+                <div class="ls-head-title">Lactating Women</div>
+                <div class="ls-head-sub">+Addition to baseline</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy +</span><span class="ls-row-value">+330–400
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein +</span><span class="ls-row-value">+17 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium +</span><span class="ls-row-value">+0 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Iodine +</span><span class="ls-row-value">+100 mcg</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="ls-card">
+            <div class="ls-head">
+              <span class="ls-emoji">👴</span>
+              <div>
+                <div class="ls-head-title">Elderly</div>
+                <div class="ls-head-sub">≥ 65 years</div>
+              </div>
+            </div>
+            <div class="ls-body">
+              <div class="ls-row"><span class="ls-row-label">Energy</span><span class="ls-row-value">1,600–1,900
+                  kcal</span></div>
+              <div class="ls-row"><span class="ls-row-label">Protein</span><span class="ls-row-value">58–64 g</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Calcium</span><span class="ls-row-value">1,200 mg</span>
+              </div>
+              <div class="ls-row"><span class="ls-row-label">Vitamin D</span><span class="ls-row-value">20 mcg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <!-- REFERENCE TABLE -->
+      <section class="section rev" id="values">
+        <div class="sec-hd">
+          <span class="sec-num">Art. V</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">AKG Reference Summary Table</h2>
+            <div class="sec-caption">Selected values for key population groups</div>
+          </div>
+        </div>
+
+        <div class="tbl-wrap rev rev-d1">
+          <table>
+            <thead>
+              <tr>
+                <th>Group</th>
+                <th>Age</th>
+                <th>Energy (kcal)</th>
+                <th>Protein (g)</th>
+                <th>Fat (g)</th>
+                <th>Carb (g)</th>
+                <th>Water (ml)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Infant</strong></td>
+                <td>0–5 mo</td>
+                <td>550</td>
+                <td>9</td>
+                <td>31</td>
+                <td>58</td>
+                <td>700</td>
+              </tr>
+              <tr>
+                <td><strong>Infant</strong></td>
+                <td>6–11 mo</td>
+                <td>725</td>
+                <td>15</td>
+                <td>35</td>
+                <td>82</td>
+                <td>900</td>
+              </tr>
+              <tr>
+                <td><strong>Child</strong></td>
+                <td>1–3 yr</td>
+                <td>1,125</td>
+                <td>20</td>
+                <td>44</td>
+                <td>155</td>
+                <td>1,150</td>
+              </tr>
+              <tr>
+                <td><strong>Child</strong></td>
+                <td>4–6 yr</td>
+                <td>1,325</td>
+                <td>25</td>
+                <td>50</td>
+                <td>220</td>
+                <td>1,450</td>
+              </tr>
+              <tr>
+                <td><strong>Child</strong></td>
+                <td>7–9 yr</td>
+                <td>1,650</td>
+                <td>35</td>
+                <td>55</td>
+                <td>280</td>
+                <td>1,650</td>
+              </tr>
+              <tr>
+                <td><strong>Male</strong></td>
+                <td>10–12 yr</td>
+                <td>2,000</td>
+                <td>50</td>
+                <td>65</td>
+                <td>300</td>
+                <td>1,800</td>
+              </tr>
+              <tr>
+                <td><strong>Male</strong></td>
+                <td>19–29 yr</td>
+                <td>2,650</td>
+                <td>65</td>
+                <td>75</td>
+                <td>430</td>
+                <td>2,500</td>
+              </tr>
+              <tr>
+                <td><strong>Male</strong></td>
+                <td>30–49 yr</td>
+                <td>2,550</td>
+                <td>65</td>
+                <td>70</td>
+                <td>415</td>
+                <td>2,500</td>
+              </tr>
+              <tr>
+                <td><strong>Male</strong></td>
+                <td>50–64 yr</td>
+                <td>2,150</td>
+                <td>60</td>
+                <td>60</td>
+                <td>340</td>
+                <td>2,500</td>
+              </tr>
+              <tr>
+                <td><strong>Male</strong></td>
+                <td>≥65 yr</td>
+                <td>1,800</td>
+                <td>64</td>
+                <td>50</td>
+                <td>275</td>
+                <td>1,800</td>
+              </tr>
+              <tr>
+                <td><strong>Female</strong></td>
+                <td>19–29 yr</td>
+                <td>2,250</td>
+                <td>60</td>
+                <td>65</td>
+                <td>360</td>
+                <td>2,350</td>
+              </tr>
+              <tr>
+                <td><strong>Female</strong></td>
+                <td>30–49 yr</td>
+                <td>2,150</td>
+                <td>60</td>
+                <td>60</td>
+                <td>340</td>
+                <td>2,350</td>
+              </tr>
+              <tr>
+                <td><strong>Female</strong></td>
+                <td>50–64 yr</td>
+                <td>1,800</td>
+                <td>53</td>
+                <td>50</td>
+                <td>280</td>
+                <td>2,350</td>
+              </tr>
+              <tr>
+                <td><strong>Female</strong></td>
+                <td>≥65 yr</td>
+                <td>1,550</td>
+                <td>58</td>
+                <td>45</td>
+                <td>230</td>
+                <td>1,600</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="ornament">❧ ❧ ❧</div>
+
+      <!-- MACRONUTRIENTS -->
+      <section class="section rev" id="macros">
+        <div class="sec-hd">
+          <span class="sec-num">Art. VI</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Macronutrients in Detail</h2>
+            <div class="sec-caption">Energy, protein, fat, and carbohydrate recommendations</div>
+          </div>
+        </div>
+
+        <div class="accord rev rev-d1">
+          <div class="accord-hd" onclick="toggleAccord(this)">
+            <div class="accord-hd-left"><span class="accord-num">01</span>
+              <div class="accord-hd-title">Energy — Kebutuhan Energi</div>
+            </div>
+            <span class="accord-arrow">▾</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-content">
+              Energy requirements are calculated based on <strong>basal metabolic rate × physical activity level
+                (PAL)</strong>. The AKG 2019 uses a PAL of 1.70 (moderate activity) as the standard for adult reference
+              values. Energy values differ by sex, age, and body weight reference values for the Indonesian population.
+              <ul>
+                <li>Adult male (19–29 yr): 2,650 kcal/day</li>
+                <li>Adult female (19–29 yr): 2,250 kcal/day</li>
+                <li>Pregnancy adds +180 kcal (1st trim.) to +300 kcal (3rd trim.)</li>
+                <li>Lactation adds +330–400 kcal depending on month</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accord rev rev-d2">
+          <div class="accord-hd" onclick="toggleAccord(this)">
+            <div class="accord-hd-left"><span class="accord-num">02</span>
+              <div class="accord-hd-title">Protein — Kebutuhan Protein</div>
+            </div>
+            <span class="accord-arrow">▾</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-content">
+              Protein AKG values are based on <strong>nitrogen balance studies</strong> and adjusted for mixed (animal +
+              plant) protein digestibility characteristic of Indonesian diets. The recommendation accounts for the
+              slightly lower bioavailability of plant-based proteins typical in Indonesian food patterns.
+              <ul>
+                <li>Infants (0–5 mo): 9 g/day (primarily from breast milk)</li>
+                <li>School-age children: 35–50 g/day</li>
+                <li>Adults: 50–65 g/day</li>
+                <li>Protein contributes 10–15% of total energy intake</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accord rev rev-d3">
+          <div class="accord-hd" onclick="toggleAccord(this)">
+            <div class="accord-hd-left"><span class="accord-num">03</span>
+              <div class="accord-hd-title">Fat — Kebutuhan Lemak</div>
+            </div>
+            <span class="accord-arrow">▾</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-content">
+              Total fat recommendations cover both quality and quantity. AKG 2019 distinguishes between total fat,
+              saturated fat, polyunsaturated fat (omega-3 and omega-6), and trans fat. For adults, fat should provide
+              20–30% of total energy.
+              <ul>
+                <li>Total fat (adult male 19–29 yr): 75 g/day</li>
+                <li>Saturated fat: &lt;10% total energy</li>
+                <li>Trans fat: as low as possible (&lt;1% total energy)</li>
+                <li>Omega-6 to omega-3 ratio: 5:1 recommended</li>
+                <li>AKG 2019 adds specific values for EPA+DHA (first time)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="accord rev rev-d4">
+          <div class="accord-hd" onclick="toggleAccord(this)">
+            <div class="accord-hd-left"><span class="accord-num">04</span>
+              <div class="accord-hd-title">Carbohydrate & Fibre — Karbohidrat dan Serat</div>
+            </div>
+            <span class="accord-arrow">▾</span>
+          </div>
+          <div class="accord-body">
+            <div class="accord-content">
+              Carbohydrates are the primary energy source in the Indonesian diet, providing 50–65% of total energy. AKG
+              2019 provides separate values for total carbohydrates, dietary fibre, and added sugar limits.
+              <ul>
+                <li>Adult male (19–29 yr): 430 g/day total carbohydrate</li>
+                <li>Dietary fibre (adult): 28–37 g/day (increased from 2013 values)</li>
+                <li>Added sugar: &lt;10% of total energy (WHO aligned)</li>
+                <li>Whole grains and legumes preferred as carbohydrate sources</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <!-- VITAMINS & MINERALS -->
+      <section class="section rev" id="micros">
+        <div class="sec-hd">
+          <span class="sec-num">Art. VII</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Vitamins & Minerals</h2>
+            <div class="sec-caption">Micronutrient reference values for adults (19–29 years)</div>
+          </div>
+        </div>
+
+        <div class="tbl-wrap rev rev-d1">
+          <table>
+            <thead>
+              <tr>
+                <th>Micronutrient</th>
+                <th>Male 19–29</th>
+                <th>Female 19–29</th>
+                <th>Pregnant (+)</th>
+                <th>Upper Limit</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Vitamin A</strong></td>
+                <td>650 mcg RE</td>
+                <td>600 mcg RE</td>
+                <td>+300 mcg</td>
+                <td>3,000 mcg</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin B1 (Thiamin)</strong></td>
+                <td>1.2 mg</td>
+                <td>1.1 mg</td>
+                <td>+0.3 mg</td>
+                <td>ND</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin B9 (Folate)</strong></td>
+                <td>400 mcg DFE</td>
+                <td>400 mcg DFE</td>
+                <td>+200 mcg</td>
+                <td>1,000 mcg</td>
+                <td><span class="badge badge-amber">Critical</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin B12</strong></td>
+                <td>4.0 mcg</td>
+                <td>4.0 mcg</td>
+                <td>+0.5 mcg</td>
+                <td>ND</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin C</strong></td>
+                <td>90 mg</td>
+                <td>75 mg</td>
+                <td>+10 mg</td>
+                <td>2,000 mg</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin D</strong></td>
+                <td>15 mcg</td>
+                <td>15 mcg</td>
+                <td>+0 mcg</td>
+                <td>100 mcg</td>
+                <td><span class="badge badge-amber">New in 2019</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin E</strong></td>
+                <td>15 mg α-TE</td>
+                <td>15 mg α-TE</td>
+                <td>+0 mg</td>
+                <td>1,000 mg</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Calcium</strong></td>
+                <td>1,000 mg</td>
+                <td>1,000 mg</td>
+                <td>+200 mg</td>
+                <td>2,500 mg</td>
+                <td><span class="badge badge-amber">Critical</span></td>
+              </tr>
+              <tr>
+                <td><strong>Iron (Fe)</strong></td>
+                <td>9 mg</td>
+                <td>26 mg</td>
+                <td>+0 mg</td>
+                <td>45 mg</td>
+                <td><span class="badge badge-red">Deficiency risk</span></td>
+              </tr>
+              <tr>
+                <td><strong>Iodine</strong></td>
+                <td>150 mcg</td>
+                <td>150 mcg</td>
+                <td>+70 mcg</td>
+                <td>600 mcg</td>
+                <td><span class="badge badge-red">Deficiency risk</span></td>
+              </tr>
+              <tr>
+                <td><strong>Zinc</strong></td>
+                <td>11 mg</td>
+                <td>8 mg</td>
+                <td>+2 mg</td>
+                <td>34 mg</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+              <tr>
+                <td><strong>Selenium</strong></td>
+                <td>30 mcg</td>
+                <td>30 mcg</td>
+                <td>+5 mcg</td>
+                <td>400 mcg</td>
+                <td><span class="badge badge-green">Key</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="hl-box rev rev-d2" style="border-color:rgba(158,50,50,0.2);">
+          <span class="hl-icon">⚠️</span>
+          <div>
+            <div class="hl-title" style="color:var(--accent-red)">Priority Micronutrients in Indonesia</div>
+            <div class="hl-text">AKG 2019 highlights <strong>iron, vitamin A, iodine, and folate</strong> as nutrients
+              of public health concern in Indonesia, where deficiency rates remain significant — particularly among
+              women of reproductive age, pregnant women, and young children.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">❧ ❧ ❧</div>
+
+      <!-- HOW TO USE -->
+      <section class="section rev" id="usage">
+        <div class="sec-hd">
+          <span class="sec-num">Art. VIII</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">How to Use AKG in Practice</h2>
+            <div class="sec-caption">Practical applications of AKG 2019 values</div>
+          </div>
+        </div>
+
+        <div class="card-grid rev rev-d1">
+          <div class="card">
+            <span class="card-icon">🍽️</span>
+            <div class="card-title">Dietary Planning</div>
+            <p class="card-body">Use AKG as the target intake when designing daily meal plans for individuals or groups.
+              Aim to meet 100% of AKG across a week rather than exactly each day.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📋</span>
+            <div class="card-title">Dietary Assessment</div>
+            <p class="card-body">Compare actual food intake data (from 24-hour recall or food records) against AKG
+              values to identify potential nutritional gaps or excesses in a population.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🏫</span>
+            <div class="card-title">School Feeding Programmes</div>
+            <p class="card-body">Government school meal programmes use AKG to set targets: school meals should
+              contribute a specific percentage (e.g. 30%) of the child's daily AKG requirements.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🏥</span>
+            <div class="card-title">Clinical Nutrition</div>
+            <p class="card-body">Healthcare providers use AKG as a starting reference for patient dietary counselling,
+              though clinical needs may deviate from population-level recommendations.</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">🏭</span>
+            <div class="card-title">Food Industry</div>
+            <p class="card-body">Food manufacturers must calculate and declare %AKG on product labels based on the 2019
+              reference values (see Food Labelling section below).</p>
+          </div>
+          <div class="card">
+            <span class="card-icon">📖</span>
+            <div class="card-title">Public Education</div>
+            <p class="card-body">AKG informs national dietary guidelines, the Isi Piringku campaign, and public
+              nutrition communication programmes targeting Indonesian households.</p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ✦ ✦</div>
+
+      <!-- FOOD LABELLING -->
+      <section class="section rev" id="labelling">
+        <div class="sec-hd">
+          <span class="sec-num">Art. IX</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">Food Labelling & %AKG</h2>
+            <div class="sec-caption">How AKG is applied on Indonesian food product labels</div>
+          </div>
+        </div>
+
+        <div class="pq rev rev-d1">
+          <p class="pq-text">
+            "The percentage of AKG (%AKG) on nutrition information panels must be calculated using the reference values
+            for an adult consuming 2,150 kcal per day as established in Permenkes 28/2019."
+          </p>
+          <div class="pq-src">— BPOM Regulation on Nutrition Labelling</div>
+        </div>
+
+        <div class="prose rev rev-d2">
+          <p>
+            Indonesian food product labels must include a <strong>Nutrition Information Panel (Informasi Nilai Gizi /
+              ING)</strong>. The %AKG figure on the label tells consumers what percentage of their recommended daily
+            intake a serving of that food provides.
+          </p>
+          <p>
+            The reference value used for all food labels is standardised at <strong>2,150 kcal per day</strong> —
+            representing the average adult requirement. This standardisation allows consumers to compare products
+            easily, even though individual needs vary.
+          </p>
+        </div>
+
+        <div class="tbl-wrap rev rev-d3">
+          <table>
+            <thead>
+              <tr>
+                <th>Nutrient</th>
+                <th>Daily Reference Value</th>
+                <th>Unit</th>
+                <th>Based on 2,150 kcal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Energy</strong></td>
+                <td>2,150</td>
+                <td>kcal</td>
+                <td><span class="badge badge-green">Reference baseline</span></td>
+              </tr>
+              <tr>
+                <td><strong>Total Fat</strong></td>
+                <td>60</td>
+                <td>g</td>
+                <td>25% of energy</td>
+              </tr>
+              <tr>
+                <td><strong>Saturated Fat</strong></td>
+                <td>20</td>
+                <td>g</td>
+                <td>&lt;10% of energy</td>
+              </tr>
+              <tr>
+                <td><strong>Cholesterol</strong></td>
+                <td>300</td>
+                <td>mg</td>
+                <td>Upper limit</td>
+              </tr>
+              <tr>
+                <td><strong>Carbohydrate</strong></td>
+                <td>305</td>
+                <td>g</td>
+                <td>57% of energy</td>
+              </tr>
+              <tr>
+                <td><strong>Dietary Fibre</strong></td>
+                <td>30</td>
+                <td>g</td>
+                <td>Adequate intake</td>
+              </tr>
+              <tr>
+                <td><strong>Protein</strong></td>
+                <td>60</td>
+                <td>g</td>
+                <td>11% of energy</td>
+              </tr>
+              <tr>
+                <td><strong>Sodium</strong></td>
+                <td>1,500</td>
+                <td>mg</td>
+                <td>Upper guidance</td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin A</strong></td>
+                <td>600</td>
+                <td>mcg RE</td>
+                <td>Female 19–29 ref.</td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin C</strong></td>
+                <td>75</td>
+                <td>mg</td>
+                <td>Female 19–29 ref.</td>
+              </tr>
+              <tr>
+                <td><strong>Calcium</strong></td>
+                <td>1,100</td>
+                <td>mg</td>
+                <td>Average adult</td>
+              </tr>
+              <tr>
+                <td><strong>Iron</strong></td>
+                <td>26</td>
+                <td>mg</td>
+                <td>Female 19–29 ref.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <div class="ornament">❧ ❧ ❧</div>
+
+      <!-- AKG 2013 vs 2019 -->
+      <section class="section rev" id="comparison">
+        <div class="sec-hd">
+          <span class="sec-num">Art. X</span>
+          <div class="sec-titles">
+            <h2 class="sec-title">AKG 2013 vs AKG 2019</h2>
+            <div class="sec-caption">Key changes and improvements in the 2019 update</div>
+          </div>
+        </div>
+
+        <div class="hl-box rev rev-d1">
+          <span class="hl-icon">🔄</span>
+          <div>
+            <div class="hl-title">Why AKG Was Updated in 2019</div>
+            <div class="hl-text">The 2013 AKG covered 32 nutritional components. The 2019 update expanded this to
+              <strong>54 components</strong>, reflecting new scientific evidence, changing dietary patterns in
+              Indonesia, and the emerging importance of previously under-studied nutrients.</div>
+          </div>
+        </div>
+
+        <div class="tbl-wrap rev rev-d2">
+          <table>
+            <thead>
+              <tr>
+                <th>Change</th>
+                <th>AKG 2013</th>
+                <th>AKG 2019</th>
+                <th>Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Total nutrients covered</strong></td>
+                <td>32 components</td>
+                <td>54 components</td>
+                <td><span class="badge badge-green">+22 new</span></td>
+              </tr>
+              <tr>
+                <td><strong>Vitamin D (adults)</strong></td>
+                <td>15 mcg/day</td>
+                <td>15 mcg/day (updated BA)</td>
+                <td><span class="badge badge-amber">Upper limit revised</span></td>
+              </tr>
+              <tr>
+                <td><strong>Omega-3 (EPA+DHA)</strong></td>
+                <td>Not specified</td>
+                <td>200 mg/day (adults)</td>
+                <td><span class="badge badge-green">New addition</span></td>
+              </tr>
+              <tr>
+                <td><strong>Dietary Fibre</strong></td>
+                <td>25–30 g/day</td>
+                <td>28–37 g/day</td>
+                <td><span class="badge badge-amber">Increased</span></td>
+              </tr>
+              <tr>
+                <td><strong>Added Sugar limit</strong></td>
+                <td>Not specified</td>
+                <td>&lt;10% total energy</td>
+                <td><span class="badge badge-green">New guidance</span></td>
+              </tr>
+              <tr>
+                <td><strong>Choline</strong></td>
+                <td>Not specified</td>
+                <td>425–550 mg/day</td>
+                <td><span class="badge badge-green">New addition</span></td>
+              </tr>
+              <tr>
+                <td><strong>Water intake</strong></td>
+                <td>2,300–2,600 ml</td>
+                <td>Updated by life stage</td>
+                <td><span class="badge badge-amber">Refined</span></td>
+              </tr>
+              <tr>
+                <td><strong>Food label reference</strong></td>
+                <td>2,000 kcal</td>
+                <td>2,150 kcal</td>
+                <td><span class="badge badge-red">Changed baseline</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card-grid rev rev-d3" style="margin-top:20px;">
+          <div class="card" style="border-left:3px solid var(--accent);">
+            <span class="card-icon">✅</span>
+            <div class="card-title">Major Achievements of AKG 2019</div>
+            <p class="card-body">First Indonesian AKG to include specific values for EPA+DHA, choline, fluoride,
+              chromium, and manganese. Also the first to explicitly set added sugar upper limits aligned with WHO
+              recommendations.</p>
+          </div>
+          <div class="card" style="border-left:3px solid var(--accent-warm);">
+            <span class="card-icon">📌</span>
+            <div class="card-title">What Remained Unchanged</div>
+            <p class="card-body">Core protein and energy recommendations for most adult groups remain similar to 2013,
+              reflecting stable scientific consensus. The general structure of life stage groupings is also maintained.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="ornament">✦ ❧ ✦</div>
+
+    </main>
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand-name">AKG 2019 — Angka Kecukupan Gizi</div>
+        <div class="footer-tagline">An educational reference guide · Permenkes No. 28 Year 2019</div>
+      </div>
+      <div class="footer-orn">✦ ❧ ✦</div>
+      <div class="footer-info">
+        Ministry of Health · Republic of Indonesia<br>
+        <span>For educational purposes only</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ JAVASCRIPT ═══ -->
+  <script>
+    // ─── THEME TOGGLE ───────────────────────────
+    const themeBtn = document.getElementById('themeBtn');
+    const htmlEl = document.documentElement;
+
+    themeBtn.addEventListener('click', () => {
+      const cur = htmlEl.getAttribute('data-theme');
+      const nxt = cur === 'light' ? 'dark' : 'light';
+      htmlEl.setAttribute('data-theme', nxt);
+      localStorage.setItem('perm28-theme', nxt);
+    });
+
+    const savedTheme = localStorage.getItem('perm28-theme');
+    if (savedTheme) htmlEl.setAttribute('data-theme', savedTheme);
+
+    // ─── READING PROGRESS ────────────────────────
+    const progBar = document.getElementById('readingProgress');
+    window.addEventListener('scroll', () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = total > 0 ? window.scrollY / total : 0;
+      progBar.style.transform = `scaleX(${pct})`;
+    }, { passive: true });
+
+    // ─── MOBILE SIDEBAR ──────────────────────────
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const sbOverlay = document.getElementById('sbOverlay');
+
+    menuBtn.addEventListener('click', () => {
+      const open = sidebar.classList.toggle('open');
+      sbOverlay.classList.toggle('open', open);
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+
+    sbOverlay.addEventListener('click', () => {
+      sidebar.classList.remove('open');
+      sbOverlay.classList.remove('open');
+      menuBtn.textContent = '☰';
+    });
+
+    // ─── SCROLL SPY (sidebar highlight) ─────────
+    const sections = document.querySelectorAll('section[id]');
+    const sbLinks = document.querySelectorAll('.sb-link');
+
+    const spyObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const id = e.target.getAttribute('id');
+          sbLinks.forEach(link => {
+            const isActive = link.getAttribute('data-s') === id;
+            link.classList.toggle('active', isActive);
+            if (isActive) {
+              link.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+            }
+          });
+        }
+      });
+    }, { rootMargin: '-15% 0px -65% 0px', threshold: 0 });
+
+    sections.forEach(s => spyObserver.observe(s));
+
+    // ─── SCROLL REVEAL ───────────────────────────
+    const revObserver = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('vis');
+          revObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.07 });
+
+    document.querySelectorAll('.section, .rev').forEach(el => revObserver.observe(el));
+
+    // ─── SMOOTH SCROLL NAVIGATION ────────────────
+    sbLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        if (!href) return;
+        const target = document.querySelector(href);
+        if (target) {
+          const y = target.getBoundingClientRect().top + window.scrollY - 84;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        if (window.innerWidth <= 820) {
+          sidebar.classList.remove('open');
+          sbOverlay.classList.remove('open');
+          menuBtn.textContent = '☰';
+        }
+      });
+    });
+
+    // ─── ACCORDION ───────────────────────────────
+    function toggleAccord(header) {
+      const accord = header.parentElement;
+      const wasOpen = accord.classList.contains('open');
+      document.querySelectorAll('.accord').forEach(a => a.classList.remove('open'));
+      if (!wasOpen) accord.classList.add('open');
+    }
+  </script>
+</body>
+
+</html>
