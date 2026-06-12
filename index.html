@@ -1593,12 +1593,12 @@
         or share perspectives and experiences — my inbox is always open.
       </p>
       <div class="contact-form">
-        <input id="name" type="text" placeholder="Your name" />
-        <input id="email" type="email" placeholder="Your email" />
-        <input id="subject" type="text" placeholder="Subject" class="full" />
-        <textarea id="message" placeholder="Your message…" class="full"></textarea>
+        <input type="text" placeholder="Your name" />
+        <input type="email" placeholder="Your email" />
+        <input type="text" placeholder="Subject" class="full" />
+        <textarea placeholder="Your message…" class="full"></textarea>
         <div class="full" style="display:flex;justify-content:flex-start">
-          <button id="sendBtn" class="btn-send">Send message</button>
+          <button class="btn-send">Send message</button>
         </div>
       </div>
       <div class="contact-socials">
@@ -1615,21 +1615,7 @@
   </footer>
 
   <script>
-    // send email
-    document.getElementById('sendBtn').addEventListener('click', function () {
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const subject = document.getElementById('subject').value;
-      const message = document.getElementById('message').value;
 
-      const body =
-        `Name: ${name}
-        Email: ${email}
-        Message:${message}`;
-
-      window.location.href =
-        `mailto:muhammadhaidar160@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    });
     const bgMusic = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicBtn");
 
