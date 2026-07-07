@@ -1,0 +1,307 @@
+kelompok,nama_bahan_makanan,energi_kkal,protein_g,lemak_g,karbohidrat_g,serat_g
+Buah-buahan,Alpukat,85.0,0.9,6.5,7.7,3.7
+Buah-buahan,Anggur hijau,69.0,0.6,0.4,18.1,0.7
+Buah-buahan,Apel hijau / granny smith,52.0,0.3,0.2,13.8,2.4
+Buah-buahan,Apel merah / fuji,58.0,0.3,0.4,14.9,2.0
+Buah-buahan,Belimbing manis,31.0,0.4,0.4,6.7,0.9
+Buah-buahan,Blewah,26.0,0.6,0.1,6.2,0.4
+Buah-buahan,Delima,83.0,1.7,1.2,18.7,4.0
+Buah-buahan,Duku,63.0,1.0,0.2,13.0,1.0
+Buah-buahan,Jambu air,25.0,0.6,0.2,5.7,0.9
+Buah-buahan,Jambu biji merah,49.0,0.9,0.3,12.2,5.4
+Buah-buahan,Jambu biji putih / kristal,48.0,0.8,0.2,12.4,5.0
+Buah-buahan,Jeruk bali,38.0,0.8,0.1,9.6,1.0
+Buah-buahan,Jeruk manis / baby,45.0,0.9,0.2,11.2,2.4
+Buah-buahan,Jeruk medan / mandarin,47.0,0.8,0.3,11.8,1.9
+Buah-buahan,Jeruk nipis / lemon cui,37.0,0.8,0.3,11.4,2.8
+Buah-buahan,Kelapa muda daging,68.0,1.0,0.9,14.0,1.5
+Buah-buahan,Kelapa parut / daging kelapa muda,359.0,3.3,34.7,14.0,9.0
+Buah-buahan,Kelengkeng,60.0,1.3,0.1,15.1,1.1
+Buah-buahan,Kiwi,61.0,1.1,0.5,14.7,3.0
+Buah-buahan,Kurma kering,282.0,2.5,0.4,75.0,6.7
+Buah-buahan,Langsat,62.0,1.0,0.3,13.5,1.1
+Buah-buahan,Lengkeng kalengan,83.0,0.3,0.0,21.1,0.5
+Buah-buahan,Mangga golek,63.0,0.6,0.4,16.0,0.9
+Buah-buahan,Mangga harum manis,65.0,0.5,0.2,17.0,1.1
+Buah-buahan,Mangga muda,39.0,0.5,0.2,9.6,1.3
+Buah-buahan,Manggis,63.0,0.6,0.3,15.6,1.8
+Buah-buahan,Markisa,97.0,2.2,0.7,23.4,10.4
+Buah-buahan,Melon,23.0,0.6,0.1,5.3,0.4
+Buah-buahan,Nanas,52.0,0.4,0.2,13.5,1.4
+Buah-buahan,Nangka masak,106.0,1.2,0.3,27.6,1.5
+Buah-buahan,Pepaya,46.0,0.5,0.1,12.2,1.7
+Buah-buahan,Pir,47.0,0.4,0.1,12.5,2.4
+Buah-buahan,Pisang ambon,99.0,1.2,0.2,25.8,1.2
+Buah-buahan,Pisang kepok,109.0,0.9,0.3,27.7,1.0
+Buah-buahan,Pisang mas,127.0,1.3,0.3,32.4,1.0
+Buah-buahan,Pisang raja,120.0,1.2,0.2,31.8,0.6
+Buah-buahan,Rambutan,69.0,0.8,0.1,17.4,0.6
+Buah-buahan,Salak pondoh,77.0,0.4,0.0,20.9,0.3
+Buah-buahan,Sawo,92.0,0.7,1.1,22.7,5.3
+Buah-buahan,Semangka kuning,27.0,0.6,0.2,6.5,0.4
+Buah-buahan,Semangka merah,28.0,0.5,0.2,6.9,0.4
+Buah-buahan,Sirsak,65.0,1.0,0.3,16.3,3.3
+Buah-buahan,Stroberi,32.0,0.7,0.3,7.7,2.0
+Bumbu & Rempah,Bawang merah,39.0,1.5,0.3,8.4,1.8
+Bumbu & Rempah,Bawang putih,95.0,4.5,0.2,17.1,2.1
+Bumbu & Rempah,Cabai hijau,23.0,1.0,0.3,5.2,1.5
+Bumbu & Rempah,Cabai merah besar,40.0,1.0,0.3,9.0,1.5
+Bumbu & Rempah,Cabai rawit,103.0,4.7,2.4,19.9,7.2
+Bumbu & Rempah,Cuka masak,18.0,0.0,0.0,0.4,0.0
+Bumbu & Rempah,Daun jeruk purut,83.0,2.6,0.9,17.0,3.0
+Bumbu & Rempah,Daun salam,90.0,2.5,1.0,17.0,4.0
+Bumbu & Rempah,Garam dapur,0.0,0.0,0.0,0.0,0.0
+Bumbu & Rempah,Jahe segar,79.0,1.5,0.9,17.8,2.0
+Bumbu & Rempah,Kecap asin,61.0,7.5,0.1,7.8,0.0
+Bumbu & Rempah,Kecap manis,229.0,2.7,0.1,53.3,0.1
+Bumbu & Rempah,Kemiri,636.0,19.3,63.0,8.3,3.8
+Bumbu & Rempah,Kencur,71.0,1.6,0.2,13.6,1.4
+Bumbu & Rempah,Kunyit segar,312.0,9.7,3.3,64.9,21.1
+Bumbu & Rempah,Lengkuas / laos,51.0,1.0,0.2,11.0,1.2
+Bumbu & Rempah,Saus sambal,93.0,1.7,0.5,21.0,1.2
+Bumbu & Rempah,Saus tomat,98.0,1.9,0.4,23.0,1.0
+Bumbu & Rempah,Serai / sereh,99.0,1.8,0.5,25.3,0.0
+Daging & Olahannya,Abon sapi,372.0,26.3,13.9,29.0,0.6
+Daging & Olahannya,Ampela ayam,111.0,17.7,3.0,1.0,0.0
+Daging & Olahannya,Bakso daging sapi,120.0,10.0,7.0,4.0,0.2
+Daging & Olahannya,"Daging ayam bagian dada, segar",194.0,29.2,7.8,0.0,0.0
+Daging & Olahannya,"Daging ayam bagian paha, segar",214.0,20.3,14.3,0.0,0.0
+Daging & Olahannya,Daging ayam tanpa kulit,150.0,25.0,5.0,0.0,0.0
+Daging & Olahannya,"Daging ayam, segar (dgn kulit)",298.0,18.2,25.0,0.0,0.0
+Daging & Olahannya,"Daging babi, segar",212.0,17.0,15.0,0.0,0.0
+Daging & Olahannya,"Daging bebek / itik, segar",326.0,16.0,28.6,0.0,0.0
+Daging & Olahannya,"Daging domba, segar",206.0,17.1,14.8,0.0,0.0
+Daging & Olahannya,"Daging kambing, segar",143.0,20.9,5.7,0.0,0.0
+Daging & Olahannya,Daging sapi giling,250.0,17.5,20.0,0.0,0.0
+Daging & Olahannya,"Daging sapi has dalam (tenderloin), segar",207.0,20.6,13.4,0.0,0.0
+Daging & Olahannya,"Daging sapi has luar (sirloin), segar",250.0,18.5,19.0,0.0,0.0
+Daging & Olahannya,Daging sapi rendang siap makan,468.0,20.0,39.0,7.0,1.1
+Daging & Olahannya,Dendeng sapi,251.0,29.0,11.0,10.0,0.5
+Daging & Olahannya,Hati ayam,119.0,16.6,4.8,2.5,0.0
+Daging & Olahannya,Hati sapi,136.0,19.7,3.2,5.3,0.0
+Daging & Olahannya,"Iga sapi, segar",290.0,19.0,23.0,0.0,0.0
+Daging & Olahannya,Kikil sapi rebus,107.0,19.1,3.5,0.0,0.0
+Daging & Olahannya,Kornet sapi kaleng,219.0,17.6,16.0,0.0,0.0
+Daging & Olahannya,Kulit ayam,449.0,15.0,45.0,0.0,0.0
+Daging & Olahannya,Sosis ayam,223.0,12.0,17.0,6.0,0.3
+Daging & Olahannya,Sosis daging sapi,301.0,13.0,27.0,2.0,0.0
+Daging & Olahannya,"Usus ayam, goreng",245.0,17.0,18.0,1.0,0.0
+Gula & Konfeksioneri,Cokelat batang manis (dark/milk umum),535.0,7.6,30.0,59.0,3.4
+Gula & Konfeksioneri,Cokelat bubuk / cocoa powder,228.0,19.6,13.7,57.9,33.2
+Gula & Konfeksioneri,Gula kelapa cetak,386.0,3.0,1.0,90.0,0.0
+Gula & Konfeksioneri,Gula merah / aren,368.0,0.4,0.1,95.0,0.0
+Gula & Konfeksioneri,Gula pasir,364.0,0.0,0.0,94.0,0.0
+Gula & Konfeksioneri,Madu,304.0,0.3,0.0,82.4,0.2
+Gula & Konfeksioneri,Marshmallow,318.0,1.8,0.2,81.0,0.1
+Gula & Konfeksioneri,Permen / kembang gula,394.0,0.0,0.2,98.0,0.0
+Gula & Konfeksioneri,Selai buah,250.0,0.4,0.1,65.0,1.0
+Gula & Konfeksioneri,Sirup gula,266.0,0.0,0.0,68.7,0.0
+"Ikan, Kerang, Udang & Olahannya",Cumi-cumi segar,75.0,16.1,0.7,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan asin jambal kering,193.0,42.0,1.5,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan bandeng segar,129.0,20.0,4.8,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan bawal segar,84.0,18.2,0.7,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan gurame segar,84.0,16.1,1.7,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan kakap merah segar,92.0,20.0,0.7,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan kembung segar,112.0,21.4,2.4,0.4,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan lele goreng,259.0,19.7,17.6,3.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan lele segar,90.0,17.7,1.8,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan mas segar,86.0,16.0,2.0,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan nila segar,96.0,20.1,1.7,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan patin segar,132.0,17.0,6.6,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan pindang,192.0,27.0,9.0,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan salmon segar,208.0,20.4,13.4,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan sarden kalengan (saus tomat),172.0,18.0,10.0,4.0,0.5
+"Ikan, Kerang, Udang & Olahannya",Ikan tenggiri segar,113.0,21.5,2.6,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan teri kering (asin),331.0,42.8,3.0,29.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan teri nasi kering,194.0,33.4,3.0,3.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan teri segar,77.0,16.0,1.0,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan tongkol segar,111.0,24.0,1.0,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Ikan tuna segar,109.0,24.4,0.6,0.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Kepiting segar,92.0,17.0,2.0,0.5,0.0
+"Ikan, Kerang, Udang & Olahannya",Kerang darah,76.0,8.5,0.9,7.7,0.0
+"Ikan, Kerang, Udang & Olahannya",Kerang hijau,63.0,10.7,1.6,1.6,0.0
+"Ikan, Kerang, Udang & Olahannya",Rajungan segar,78.0,16.5,1.0,0.6,0.0
+"Ikan, Kerang, Udang & Olahannya",Rumput laut segar,26.0,1.2,0.2,5.6,1.3
+"Ikan, Kerang, Udang & Olahannya",Terasi udang,155.0,30.0,3.5,3.0,0.0
+"Ikan, Kerang, Udang & Olahannya",Udang goreng tepung,245.0,15.0,13.0,17.0,0.5
+"Ikan, Kerang, Udang & Olahannya",Udang rebon kering,299.0,59.4,3.6,3.2,0.0
+"Ikan, Kerang, Udang & Olahannya",Udang segar,91.0,21.0,0.2,0.1,0.0
+Kacang-kacangan & Olahannya,Kacang almond,575.0,21.2,49.9,21.6,12.5
+Kacang-kacangan & Olahannya,Kacang hijau rebus,105.0,7.0,0.4,19.0,3.0
+Kacang-kacangan & Olahannya,"Kacang hijau, mentah",345.0,22.2,1.2,62.9,7.6
+Kacang-kacangan & Olahannya,Kacang kedelai kering,381.0,34.9,18.1,34.8,9.3
+Kacang-kacangan & Olahannya,Kacang koro,342.0,20.0,1.4,64.0,9.0
+Kacang-kacangan & Olahannya,Kacang merah kering,336.0,22.3,1.5,61.2,15.2
+Kacang-kacangan & Olahannya,Kacang mete,553.0,18.2,43.9,30.2,3.3
+Kacang-kacangan & Olahannya,"Kacang tanah kupas, mentah",452.0,25.3,42.8,17.4,8.5
+Kacang-kacangan & Olahannya,Kacang tanah sangrai,456.0,25.5,44.0,15.0,7.0
+Kacang-kacangan & Olahannya,Kacang tolo / kacang tunggak,336.0,22.9,1.4,60.0,10.7
+Kacang-kacangan & Olahannya,Oncom,187.0,13.5,7.5,22.5,3.6
+Kacang-kacangan & Olahannya,Selai kacang,588.0,25.0,50.0,20.0,6.0
+Kacang-kacangan & Olahannya,"Susu kedelai, cair",41.0,3.5,2.5,5.0,0.6
+Kacang-kacangan & Olahannya,Tahu,80.0,10.9,4.7,0.8,0.1
+Kacang-kacangan & Olahannya,Tahu goreng,151.0,11.0,10.7,4.3,0.3
+Kacang-kacangan & Olahannya,Tahu sutra / silken tofu,55.0,5.0,3.0,2.0,0.3
+Kacang-kacangan & Olahannya,Tempe kedelai + jagung,240.0,15.0,10.0,24.0,2.0
+Kacang-kacangan & Olahannya,"Tempe kedelai murni, goreng",350.0,24.5,26.6,10.4,1.5
+Kacang-kacangan & Olahannya,"Tempe kedelai murni, mentah",201.0,20.8,8.8,13.5,1.4
+Makanan Jajanan & Olahan Tradisional,"Ayam goreng serundeng (paha, dgn minyak)",319.0,15.5,32.6,4.4,1.0
+Makanan Jajanan & Olahan Tradisional,Bakwan sayur / bala-bala,280.0,4.5,18.0,25.0,1.8
+Makanan Jajanan & Olahan Tradisional,Bihun sayur (campuran matang),108.0,0.8,3.2,19.5,1.6
+Makanan Jajanan & Olahan Tradisional,Capcay kuah,60.0,3.0,2.5,6.5,1.8
+Makanan Jajanan & Olahan Tradisional,Emping melinjo goreng,345.0,9.7,3.0,68.0,3.5
+Makanan Jajanan & Olahan Tradisional,Gado-gado (tanpa lontong),145.0,6.0,9.0,11.0,3.2
+Makanan Jajanan & Olahan Tradisional,Kerupuk kulit / rambak goreng,475.0,45.0,25.0,5.0,0.0
+Makanan Jajanan & Olahan Tradisional,Kerupuk udang goreng,510.0,2.5,25.0,64.0,0.5
+Makanan Jajanan & Olahan Tradisional,Klepon,195.0,1.5,3.0,42.0,1.2
+Makanan Jajanan & Olahan Tradisional,Kue lapis,245.0,2.5,3.0,52.0,0.5
+Makanan Jajanan & Olahan Tradisional,Kue putu,180.0,2.0,3.5,35.0,1.0
+Makanan Jajanan & Olahan Tradisional,Lemper ayam,210.0,5.5,6.0,33.0,0.8
+Makanan Jajanan & Olahan Tradisional,Martabak manis (per potong std),320.0,6.0,14.0,44.0,1.0
+Makanan Jajanan & Olahan Tradisional,Martabak telur,290.0,12.0,18.0,20.0,0.8
+Makanan Jajanan & Olahan Tradisional,Nasi bunga telang,180.4,3.3,0.3,39.8,0.4
+Makanan Jajanan & Olahan Tradisional,Nasi goreng sederhana,190.0,4.5,7.0,27.0,0.8
+Makanan Jajanan & Olahan Tradisional,Onde-onde,280.0,5.0,10.0,44.0,2.0
+Makanan Jajanan & Olahan Tradisional,Pecel sayur bumbu kacang,158.0,6.5,9.5,13.0,3.5
+Makanan Jajanan & Olahan Tradisional,Pempek ikan,180.0,8.0,4.0,28.0,0.5
+Makanan Jajanan & Olahan Tradisional,Perkedel kentang,210.0,4.8,11.5,23.0,1.6
+Makanan Jajanan & Olahan Tradisional,Rendang daging sapi,468.0,20.0,39.0,7.0,1.1
+Makanan Jajanan & Olahan Tradisional,Risoles sayur,233.0,5.0,12.0,26.0,1.5
+Makanan Jajanan & Olahan Tradisional,Sate ayam bumbu kacang,250.0,18.0,16.0,8.0,1.2
+Makanan Jajanan & Olahan Tradisional,Sop sayur bening,45.0,3.0,1.5,5.0,1.5
+Makanan Jajanan & Olahan Tradisional,"Soto ayam (kuah + isi, tanpa nasi)",95.0,8.0,5.0,4.0,0.8
+Minuman,Air kelapa muda,17.0,0.3,0.1,3.7,0.0
+Minuman,Cincau hijau (tanpa gula),8.0,0.1,0.1,1.8,1.0
+Minuman,Es kelapa muda + gula,70.0,0.4,0.5,17.0,0.2
+Minuman,Es teh manis,45.0,0.0,0.0,11.5,0.0
+Minuman,Jus alpukat + susu + gula,120.0,1.5,6.0,16.0,1.5
+Minuman,"Jus jeruk, tanpa gula tambahan",45.0,0.7,0.2,10.4,0.2
+Minuman,Kopi hitam tanpa gula,2.0,0.1,0.0,0.4,0.0
+Minuman,Kopi susu,56.0,1.5,2.0,8.0,0.0
+Minuman,Minuman berkarbonasi (soda manis),41.0,0.0,0.0,10.6,0.0
+Minuman,Minuman isotonik kemasan,20.0,0.0,0.0,5.0,0.0
+Minuman,Sari kedelai manis kemasan,54.0,2.5,1.5,8.0,0.4
+Minuman,Susu cokelat siap minum,84.0,3.0,2.8,12.5,0.6
+Minuman,Teh manis,37.0,0.0,0.0,9.5,0.0
+Minuman,Teh tawar,1.0,0.0,0.0,0.3,0.0
+Minuman,Wedang jahe,65.0,0.1,0.1,16.0,0.2
+Minyak & Lemak,Lemak babi / lard,902.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,Lemak sapi / gajih sapi,854.0,1.5,90.0,0.0,0.0
+Minyak & Lemak,Margarin,720.0,0.6,81.0,0.4,0.0
+Minyak & Lemak,Minyak jagung,884.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,Minyak kedelai,884.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,Minyak kelapa,862.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,Minyak kelapa sawit,862.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,Minyak zaitun,884.0,0.0,100.0,0.0,0.0
+Minyak & Lemak,"Santan kelapa, peras encer",122.0,2.0,11.7,3.3,1.1
+Minyak & Lemak,"Santan kelapa, peras kental",324.0,4.2,34.3,5.6,1.5
+Sayuran,Asparagus,20.0,2.2,0.1,3.9,2.1
+Sayuran,Bawang bombay,39.0,1.1,0.1,9.3,1.7
+Sayuran,Bayam merah,51.0,4.6,0.5,10.0,1.0
+Sayuran,Bayam segar,36.0,3.5,0.5,6.5,2.2
+Sayuran,Brokoli,34.0,2.8,0.4,6.6,2.6
+Sayuran,Buncis,35.0,2.4,0.2,7.7,2.1
+Sayuran,Buncis rebus,25.0,1.7,0.1,5.7,2.2
+Sayuran,Daun bawang / bawang prei,27.0,1.5,0.3,6.0,1.8
+Sayuran,Daun katuk,59.0,4.8,1.0,11.0,1.5
+Sayuran,Daun kemangi,23.0,3.0,0.6,2.6,1.6
+Sayuran,Daun melinjo,67.0,5.0,1.3,10.7,2.6
+Sayuran,Daun pepaya,79.0,8.0,2.0,11.9,2.0
+Sayuran,Daun singkong,47.0,4.6,0.9,7.7,2.9
+Sayuran,Daun singkong rebus,57.0,5.4,1.0,9.5,3.3
+Sayuran,Genjer,22.0,2.2,0.4,3.4,1.5
+Sayuran,Jamur kancing / champignon,22.0,3.1,0.3,3.3,1.0
+Sayuran,Jamur kuping segar,28.0,1.1,0.1,6.7,3.5
+Sayuran,Jamur merang segar,23.0,2.6,0.3,3.5,1.5
+Sayuran,Jamur tiram segar,19.0,3.3,0.4,2.3,1.6
+Sayuran,Jengkol,133.0,8.4,0.3,23.2,1.9
+Sayuran,Kacang panjang,34.0,2.7,0.3,6.6,2.1
+Sayuran,Kangkung segar,29.0,3.0,0.3,5.4,1.9
+Sayuran,Kapri / ercis,81.0,5.4,0.4,14.5,5.1
+Sayuran,Kembang kol,25.0,1.9,0.2,5.0,2.0
+Sayuran,Kentang muda,70.0,2.0,0.1,15.9,1.5
+Sayuran,Kol / kubis putih,25.0,1.4,0.2,5.8,1.5
+Sayuran,Kol ungu,31.0,1.4,0.2,7.4,2.1
+Sayuran,Labu kuning / waluh,29.0,1.1,0.3,6.6,0.9
+Sayuran,Labu siam,19.0,0.6,0.1,4.5,1.7
+Sayuran,Nangka muda,51.0,2.8,0.3,11.3,1.5
+Sayuran,Pakcoy,13.0,1.5,0.2,2.2,1.0
+Sayuran,Paprika hijau,20.0,0.9,0.2,4.6,1.7
+Sayuran,Paprika merah,31.0,1.0,0.3,6.0,2.1
+Sayuran,Pare,17.0,1.0,0.2,3.6,1.4
+Sayuran,Petai,129.0,10.4,0.9,21.6,2.0
+Sayuran,Rebung / bambu muda,27.0,2.6,0.3,5.2,2.2
+Sayuran,Sawi hijau / sawi caisim,22.0,2.3,0.3,4.0,1.2
+Sayuran,Sawi putih,15.0,1.2,0.2,3.0,1.0
+Sayuran,Seledri,13.0,0.9,0.1,2.6,1.6
+Sayuran,Tauge / kecambah kacang hijau,23.0,2.9,0.2,4.1,1.9
+Sayuran,Tauge kedelai,46.0,5.3,1.7,4.9,2.3
+Sayuran,Terong ungu,24.0,1.1,0.2,5.7,3.0
+Sayuran,Timun / mentimun,15.0,0.7,0.1,3.4,0.5
+Sayuran,Tomat cherry,18.0,0.9,0.2,3.9,1.2
+Sayuran,Tomat masak,20.0,1.0,0.3,4.2,1.2
+Sayuran,Wortel segar,36.0,1.2,0.3,7.9,3.0
+"Serealia, Umbi & Olahannya","Beras giling putih, mentah",357.0,8.4,1.7,77.1,0.2
+"Serealia, Umbi & Olahannya","Beras giling var pelita, mentah",357.0,8.4,1.7,77.1,0.2
+"Serealia, Umbi & Olahannya","Beras giling var rojolele, mentah",369.0,9.5,1.4,77.1,0.2
+"Serealia, Umbi & Olahannya","Beras hitam, mentah",356.0,8.5,2.5,75.0,4.9
+"Serealia, Umbi & Olahannya",Beras jagung kuning kering,351.0,8.0,1.3,76.9,2.2
+"Serealia, Umbi & Olahannya","Beras ketan hitam, mentah",356.0,7.9,1.0,75.5,4.7
+"Serealia, Umbi & Olahannya","Beras ketan putih, mentah",362.0,6.7,0.7,79.4,1.0
+"Serealia, Umbi & Olahannya","Beras merah giling, mentah",349.0,7.3,1.0,76.2,3.5
+"Serealia, Umbi & Olahannya",Bihun kering,364.0,0.9,0.1,84.4,1.0
+"Serealia, Umbi & Olahannya",Bubur beras / nasi tim,39.0,0.7,0.1,8.7,0.1
+"Serealia, Umbi & Olahannya",Ganyong,95.0,1.0,0.1,22.6,1.2
+"Serealia, Umbi & Olahannya",Gaplek (singkong kering),338.0,1.5,0.7,81.3,3.0
+"Serealia, Umbi & Olahannya","Jagung kuning pipil, tua",355.0,9.2,3.9,73.7,2.7
+"Serealia, Umbi & Olahannya",Jagung manis rebus,96.0,3.4,1.5,21.3,2.4
+"Serealia, Umbi & Olahannya",Jagung muda / putren,90.0,3.0,1.0,19.0,2.0
+"Serealia, Umbi & Olahannya",Kentang,83.0,2.1,0.1,19.1,2.1
+"Serealia, Umbi & Olahannya",Kentang rebus,71.0,1.4,0.1,16.3,1.6
+"Serealia, Umbi & Olahannya",Makaroni kering,363.0,12.0,1.0,74.0,3.0
+"Serealia, Umbi & Olahannya",Mi basah,86.0,0.6,3.3,14.0,0.6
+"Serealia, Umbi & Olahannya","Mi instan (kering, tanpa bumbu)",386.0,8.0,14.0,58.0,2.0
+"Serealia, Umbi & Olahannya",Mi kering,337.0,7.9,11.8,50.0,2.6
+"Serealia, Umbi & Olahannya",Nasi merah,149.0,2.8,1.0,32.5,1.8
+"Serealia, Umbi & Olahannya",Nasi putih,178.0,2.7,0.3,40.6,0.4
+"Serealia, Umbi & Olahannya",Oatmeal / havermut,389.0,16.9,6.9,66.3,10.6
+"Serealia, Umbi & Olahannya",Roti tawar gandum,259.0,10.7,4.2,45.5,7.4
+"Serealia, Umbi & Olahannya",Roti tawar putih,248.0,8.0,1.2,50.0,2.7
+"Serealia, Umbi & Olahannya",Singkong / ubi kayu,154.0,1.0,0.3,36.8,1.9
+"Serealia, Umbi & Olahannya",Singkong rebus,112.0,0.6,0.3,26.8,1.6
+"Serealia, Umbi & Olahannya",Soun / suun kering,363.0,0.8,0.2,88.0,0.9
+"Serealia, Umbi & Olahannya",Talas,98.0,1.9,0.2,23.7,1.7
+"Serealia, Umbi & Olahannya",Tepung beras,364.0,7.0,0.5,80.1,1.0
+"Serealia, Umbi & Olahannya",Tepung maizena,343.0,0.3,0.1,85.0,0.9
+"Serealia, Umbi & Olahannya",Tepung sagu,353.0,0.7,0.2,87.0,0.5
+"Serealia, Umbi & Olahannya",Tepung tapioka,362.0,0.5,0.3,88.2,0.9
+"Serealia, Umbi & Olahannya",Tepung terigu,365.0,8.9,1.3,77.3,2.7
+"Serealia, Umbi & Olahannya",Ubi jalar kuning,123.0,1.8,0.7,27.9,3.0
+"Serealia, Umbi & Olahannya",Ubi jalar merah / cilembu,119.0,0.8,0.3,28.0,3.0
+"Serealia, Umbi & Olahannya",Ubi jalar putih,123.0,1.8,0.7,27.9,3.0
+"Serealia, Umbi & Olahannya",Ubi jalar ungu,97.0,1.3,0.2,22.7,3.1
+Susu & Olahannya,Es krim susu,207.0,4.0,11.0,24.0,0.7
+Susu & Olahannya,Keju cheddar,326.0,22.8,20.3,1.3,0.0
+Susu & Olahannya,Keju cottage,98.0,11.1,4.3,3.4,0.0
+Susu & Olahannya,Keju mozarella,280.0,22.2,17.1,2.2,0.0
+Susu & Olahannya,Mentega / butter,725.0,0.5,81.6,1.4,0.0
+Susu & Olahannya,Susu bubuk full cream,502.0,24.6,26.6,38.4,0.0
+Susu & Olahannya,Susu bubuk skim,362.0,35.6,1.0,52.0,0.0
+Susu & Olahannya,Susu formula bayi (bubuk),510.0,11.0,26.0,56.0,0.0
+Susu & Olahannya,Susu full cream UHT,64.1,3.2,3.2,5.2,0.0
+Susu & Olahannya,Susu kental manis,336.0,8.2,8.7,55.0,0.0
+Susu & Olahannya,Susu low fat UHT,42.0,3.4,1.0,5.5,0.0
+Susu & Olahannya,Susu sapi murni / segar,62.0,3.3,3.4,4.7,0.0
+Susu & Olahannya,Susu skim cair,36.0,3.6,0.1,5.1,0.0
+Susu & Olahannya,Yogurt plain / tawar,61.0,3.5,3.3,4.7,0.0
+Susu & Olahannya,Yogurt rendah lemak,63.0,5.3,1.5,7.7,0.0
+Telur & Olahannya,"Kuning telur ayam, segar",361.0,16.3,31.9,0.7,0.0
+Telur & Olahannya,"Putih telur ayam, segar",50.0,10.8,0.0,0.7,0.0
+Telur & Olahannya,"Telur asin, rebus",195.0,13.6,13.6,1.4,0.0
+Telur & Olahannya,Telur ayam dadar / goreng,203.0,13.6,15.5,1.2,0.0
+Telur & Olahannya,"Telur ayam kampung, segar",158.0,12.8,10.5,0.8,0.0
+Telur & Olahannya,"Telur ayam ras, segar",154.0,12.4,10.8,0.7,0.0
+Telur & Olahannya,Telur ayam rebus,155.0,12.6,10.6,1.1,0.0
+Telur & Olahannya,"Telur bebek asin, rebus",195.0,13.6,13.6,1.4,0.0
+Telur & Olahannya,"Telur bebek, segar",189.0,13.1,14.3,0.8,0.0
+Telur & Olahannya,"Telur puyuh, segar",158.0,13.1,11.1,0.8,0.0

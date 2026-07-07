@@ -1,0 +1,27 @@
+kelompok_umur,jenis_kelamin,energi_kkal,protein_g,lemak_g,karbohidrat_g,serat_g
+0-5 bulan,Bayi,550,9,31,59,0
+6-11 bulan,Bayi,800,15,35,105,11
+1-3 tahun,Anak,1350,20,45,215,19
+4-6 tahun,Anak,1400,25,50,220,20
+7-9 tahun,Anak,1650,40,55,250,23
+10-12 tahun,Laki-laki,2000,50,65,300,28
+13-15 tahun,Laki-laki,2400,70,80,350,34
+16-18 tahun,Laki-laki,2650,75,85,400,37
+19-29 tahun,Laki-laki,2650,65,75,430,37
+30-49 tahun,Laki-laki,2550,65,70,415,36
+50-64 tahun,Laki-laki,2150,65,60,340,30
+65-80 tahun,Laki-laki,1800,64,50,275,25
+80+ tahun,Laki-laki,1600,64,45,235,22
+10-12 tahun,Perempuan,1900,55,65,280,27
+13-15 tahun,Perempuan,2050,65,70,300,29
+16-18 tahun,Perempuan,2100,65,70,300,29
+19-29 tahun,Perempuan,2250,60,65,360,32
+30-49 tahun,Perempuan,2150,60,60,340,30
+50-64 tahun,Perempuan,1800,60,50,280,25
+65-80 tahun,Perempuan,1550,58,45,230,22
+80+ tahun,Perempuan,1400,58,40,200,20
+Hamil trimester 1 (tambahan),Ibu Hamil,180,1,2.3,25,3
+Hamil trimester 2 (tambahan),Ibu Hamil,300,10,2.3,40,4
+Hamil trimester 3 (tambahan),Ibu Hamil,300,30,2.3,40,4
+Menyusui 6 bln pertama (tambahan),Ibu Menyusui,330,20,2.2,45,5
+Menyusui 6 bln kedua (tambahan),Ibu Menyusui,400,15,2.2,55,5
